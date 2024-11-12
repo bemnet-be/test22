@@ -8,6 +8,7 @@ import { CartProvider } from './context/cartContext'
 import NavAppBar from './components/common/Nav/nav'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { ProductProvider } from './context/productContext'
+import Footer from './components/common/Nav/Footer/Footer'
 
 interface RootLayoutProps {
   // products?: Product[]
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: PropsWithChildren<RootLayoutPro
               <Router>
                 <NavAppBar theme={theme} onThemeToggle={toggleTheme} />
                 <div id='__next'>{children}</div>
+                <Footer/>
               </Router>
             </CartProvider>
           </ProductProvider>
